@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+  display: flex;
+  flex-direction: row;
+
+  font-family: "Montserrat", sans-serif;
+  background-color: #e6ccb2;
+}
+
+/* ASIDE */
+
+.aside {
+  width: 20%;
+  height: 100vh;
+  padding: 10px;
+  border-right: 3px solid #b08968;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  background-color: #ddb892;
+}
+.aside-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f4f3ee;
+}
+.aside-photo {
+  width: 220px;
+  border-radius: 25px;
+}
+.fullname {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f4f3ee;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.nav-link {
+  color: #f4f3ee;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: #b08968;
+  transform: scale(1.1);
+}
+.nav-item {
+  font-size: 1.1rem;
+}
+.aside-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.social-link {
+  color: #f4f3ee;
+}
+.e-mail {
+  width: 40px;
+}
+.telegram {
+  width: 40px;
+}
+.instagram {
+  width: 40px;
+}
+.phone-number {
+  font-size: 1rem;
+  color: #f4f3ee;
+}
+/* CONTAINER */
+
+.container {
+  height: 100%;
+  width: 80%;
+}
+
+/* MAIN */
+
+.main {
+}
+
+/* ABOUT */
+
+.about {
+}
+
+/* EDUCATION */
+
+.education {
+}
+
+/* EXPERIENCE */
+
+.experience {
+}
+
+/* SKILLS */
+
+.skills {
+}
+/* FOOTER */
