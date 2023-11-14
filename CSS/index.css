@@ -7,6 +7,7 @@ body {
 
   font-family: "Montserrat", sans-serif;
   background-color: #e6ccb2;
+  color: #f4f3ee;
 }
 
 /* ASIDE */
@@ -16,7 +17,9 @@ body {
   height: 100vh;
   padding: 10px;
   border-right: 3px solid #b08968;
-
+  position: relative;
+  position: fixed;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,12 +75,24 @@ body {
 }
 .e-mail {
   width: 40px;
+  transition: all 0.1s ease-in;
+}
+.e-mail:hover {
+  transform: scale(1.2);
 }
 .telegram {
   width: 40px;
+  transition: all 0.1s ease-in;
+}
+.telegram:hover {
+  transform: scale(1.2);
 }
 .instagram {
   width: 40px;
+  transition: all 0.1s ease-in;
+}
+.instagram:hover {
+  transform: scale(1.2);
 }
 .phone-number {
   font-size: 1rem;
@@ -88,16 +103,43 @@ body {
 .container {
   height: 100%;
   width: 80%;
+  flex: 1;
 }
 
 /* MAIN */
 
 .main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 30px 50px 330px;
+}
+section {
+  height: 650px;
 }
 
 /* ABOUT */
 
 .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  width: 100%;
+  text-align: end;
+  align-self: flex-start;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b08968;
+}
+
+.text {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #7f5539;
+  height: 300px;
+  /* align-self: center; */
 }
 
 /* EDUCATION */
