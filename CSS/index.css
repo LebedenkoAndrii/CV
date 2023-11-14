@@ -10,12 +10,13 @@ body {
   color: #f4f3ee;
 }
 
-/* ASIDE */
+/* menu */
 
-.aside {
+.menu {
   width: 20%;
   height: 100vh;
   padding: 10px;
+  z-index: 99;
   border-right: 3px solid #b08968;
   position: relative;
   position: fixed;
@@ -25,15 +26,63 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
+  transition: 0.5s;
   background-color: #ddb892;
+  transform: translateX(-100%);
 }
-.aside-title {
+.menu-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -65px;
+  top: 50%;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: "";
+  display: block;
+  transition: all 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-7px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+.menu-btn-active span::before {
+  transform: rotate(45deg);
+  width: 10px;
+  transform-origin: left bottom;
+}
+.menu-btn-active span::after {
+  transform: rotate(-45deg);
+  width: 10px;
+  transform-origin: left top;
+}
+
+.menu-active {
+  transform: translateX(0%);
+}
+.menu-title {
   font-size: 1.5rem;
   font-weight: 500;
   color: #f4f3ee;
 }
-.aside-photo {
+.menu-photo {
   width: 220px;
   border-radius: 25px;
 }
@@ -59,7 +108,7 @@ body {
 .nav-item {
   font-size: 1.1rem;
 }
-.aside-social {
+.menu-social {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,8 +151,8 @@ body {
 
 .container {
   height: 100%;
-  width: 80%;
-  flex: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* MAIN */
@@ -112,23 +161,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 50px 30px 50px 330px;
+  padding: 50px 40px;
+  z-index: 0;
+  transition: 0.5s;
 }
-section {
-  height: 650px;
+.main-active {
+  transform: translateX(20%);
 }
 
 /* ABOUT */
 
 .about {
+  height: 800px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .title {
-  width: 100%;
   text-align: end;
-  align-self: flex-start;
   font-size: 3rem;
   font-weight: 700;
   color: #b08968;
@@ -136,24 +186,32 @@ section {
 
 .text {
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: #7f5539;
   height: 300px;
-  /* align-self: center; */
+  max-width: 1000px;
+  margin: auto 0;
+  align-self: center;
+
+  padding: 0 30px;
 }
 
 /* EDUCATION */
 
 .education {
+  height: 800px;
 }
 
 /* EXPERIENCE */
 
 .experience {
+  height: 800px;
 }
 
 /* SKILLS */
 
 .skills {
+  height: 800px;
 }
 /* FOOTER */

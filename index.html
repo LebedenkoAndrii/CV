@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/index.css" />
     <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
     <link rel="stylesheet" href="./CSS/index-media.css" />
     <link
       rel="apple-touch-icon"
@@ -24,26 +24,30 @@
       href="./assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>CV for practice</title>
   </head>
   <body>
-    <aside class="aside">
-      <h1 class="aside-title">CV for practice</h1>
+    <div class="menu">
+      <div class="menu-btn">
+        <span></span>
+      </div>
+      <h1 class="menu-title">CV for practice</h1>
       <img
-        class="aside-photo"
+        class="menu-photo"
         src="./assets/photo/my-photo.png"
         alt="my-photo"
       />
       <h2 class="fullname">Lebedenko Andrii</h2>
       <nav class="nav">
         <ul class="nav-list">
-          <a class="nav-link" href="#!"><li class="nav-item">About</li></a>
+          <a class="nav-link" href="#about"><li class="nav-item">About</li></a>
           <a class="nav-link" href="#!"><li class="nav-item">Education</li></a>
           <a class="nav-link" href="#!"><li class="nav-item">Experience</li></a>
           <a class="nav-link" href="#!"><li class="nav-item">Skills</li></a>
         </ul>
       </nav>
-      <div class="aside-social">
+      <div class="menu-social">
         <div class="socials">
           <a class="social-link" href="mailto:lebedenko1928@gmail.com"
             ><img
@@ -70,11 +74,11 @@
         <p class="phone-number">+380632883461</p>
         <p class="phone-number">+380506978474</p>
       </div>
-    </aside>
+    </div>
     <div class="container">
       <main class="main">
-        <section class="about">
-          <div class="title"><p>About</p></div>
+        <section class="about" id="about">
+          <div class="title" data-aos="fade-left"><p>About</p></div>
           <div class="text">
             <p>
               Hello, my name is Andrii. I`m 19 years old, live in Cherkasy,
@@ -86,12 +90,20 @@
             </p>
           </div>
         </section>
-        <section class="education"></section>
-        <section class="experience"></section>
-        <section class="skills"></section>
+        <section class="education">
+          <div class="title" data-aos="fade-left"><p>Education</p></div>
+        </section>
+        <section class="experience">
+          <div class="title" data-aos="fade-left"><p>Experience</p></div>
+        </section>
+        <section class="skills">
+          <div class="title" data-aos="fade-left"><p>Skills</p></div>
+        </section>
       </main>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/jquery-3.7.1.min.js"></script>
     <script src="./src/script.js"></script>
   </body>
 </html>
