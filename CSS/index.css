@@ -42,41 +42,33 @@ body {
   top: 50%;
   cursor: pointer;
 }
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-  position: absolute;
-
-  left: 50%;
-  margin-left: -10px;
-  top: 50%;
-  width: 20px;
+.menu-btn span {
+  width: 30px;
   height: 2px;
-  background-color: #ede0d4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f4f3ee;
+  transition: all 0.5s;
 }
-.menu-btn span::before,
-.menu-btn span::after {
-  content: "";
-  display: block;
-  transition: all 0.2s;
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
 }
-.menu-btn span::before {
-  transform: translateY(-7px);
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
 }
-.menu-btn span::after {
-  transform: translateY(5px);
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
 }
-.menu-btn-active span::before {
-  transform: rotate(45deg);
-  width: 10px;
-  transform-origin: left bottom;
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
 }
-.menu-btn-active span::after {
-  transform: rotate(-45deg);
-  width: 10px;
-  transform-origin: left top;
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
 }
-
 .menu-active {
   transform: translateX(0%);
 }
@@ -181,7 +173,6 @@ section {
   height: 800px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 .title {
   margin: 20px 30px 0 0;
@@ -208,10 +199,49 @@ section {
   align-self: flex-end;
   margin: 10px;
 }
+
 /* EDUCATION */
 
 .education {
   height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  color: #7f5539;
+  width: 400px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.card-img {
+  border-radius: 20px;
+}
+.card-discription {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+.education-years {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* EXPERIENCE */
