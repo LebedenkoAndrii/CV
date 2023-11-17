@@ -100,7 +100,8 @@
 }
 @media screen and (max-width: 768px) {
   .menu {
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
+    padding: 40px 10px 10px;
   }
   .main {
     padding: 15px 10px;
