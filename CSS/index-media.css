@@ -93,6 +93,10 @@
   .phone-number {
     font-size: 1.5em;
   }
+  .card-container,
+  .skills-container {
+    margin: 20px 15px;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -119,6 +123,9 @@
   }
   .menu {
     font-size: 1.2rem;
+  }
+  .main {
+    padding: 15px 10px;
   }
   .menu-btn {
     width: 75px;
