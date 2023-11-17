@@ -10,6 +10,7 @@ $(".menu-btn").on("click", function (e) {
 // hide menu
 $(".nav-link").on("click", function () {
   $(".menu").toggleClass("menu-active");
+  $(".menu-btn").toggleClass("active");
 });
 
 // scroll-bar
