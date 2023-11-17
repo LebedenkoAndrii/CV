@@ -123,13 +123,14 @@
   }
   .menu {
     font-size: 1rem;
+    padding: 40px 10px 10px;
   }
   .main {
     padding: 15px 10px;
   }
   .menu-btn {
-    width: 75px;
-    height: 75px;
+    width: 55px;
+    height: 55px;
   }
   .title {
     font-size: 2rem;
