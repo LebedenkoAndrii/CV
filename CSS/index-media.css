@@ -98,6 +98,9 @@
   .menu {
     font-size: 1.5 rem;
   }
+  .main {
+    padding: 15px 10px;
+  }
   .card-container,
   .skills-container {
     margin: 20px 5px 20px;
