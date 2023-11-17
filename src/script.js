@@ -1,3 +1,4 @@
+// menu buton
 $(".menu-btn").on("click", function (e) {
   e.preventDefault();
   $(".menu").toggleClass("menu-active");
@@ -5,6 +6,12 @@ $(".menu-btn").on("click", function (e) {
   $("body").toggleClass("lock");
   $(".main").toggleClass("main-active");
 });
+
+// hide menu
+$(".nav-link").on("click", function () {
+  $(".menu").toggleClass("menu-active");
+});
+
 // scroll-bar
 function scrollBarWidth() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
