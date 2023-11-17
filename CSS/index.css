@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
+
+:root {
+  --primary-color: #7f5539;
+  --font-family: "Montserrat", sans-serif;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -7,49 +12,83 @@ body {
   display: flex;
   flex-direction: row;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-family);
   background-color: #e6ccb2;
-  color: #f4f3ee;
+  color: var(--primary-color);
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+/* SCROLL-BAR */
+
+#bar {
+  width: 0px;
+  height: 6px;
+  background-color: #7f5539;
+  position: fixed;
+  top: 0;
+  transition: width 0.3s ease;
+  z-index: 999;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* menu */
 
 .menu {
-  width: 20%;
-  height: 100vh;
-  padding: 10px;
-  z-index: 99;
-  border-right: 3px solid #b08968;
-  position: relative;
-  position: fixed;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  transition: 0.5s;
+
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  padding: 10px;
+
   background-color: #ddb892;
+  color: #f4f3ee;
+  border-right: 3px solid #b08968;
+  text-align: center;
+
+  transition: 0.5s ease;
   transform: translateX(-100%);
+  z-index: 99;
 }
 .menu-btn {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
+
   background: #7f5539;
+  box-shadow: 0 0 10px black;
   border-radius: 50%;
-  position: absolute;
-  right: -65px;
+  position: fixed;
+
+  left: 10px;
   top: 50%;
+
+  transition: all 0.5s ease;
   cursor: pointer;
+  z-index: 999;
+}
+.menu-btn.active {
+  transform: translateX(20vw);
 }
 .menu-btn span {
   width: 30px;
   height: 2px;
   position: absolute;
+
+  background-color: #f4f3ee;
+
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
-  background-color: #f4f3ee;
   transition: all 0.5s;
 }
 .menu-btn span:nth-of-type(2) {
@@ -75,7 +114,6 @@ body {
 .menu-title {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #f4f3ee;
 }
 .menu-photo {
   width: 220px;
@@ -84,7 +122,6 @@ body {
 .fullname {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f4f3ee;
 }
 .nav-list {
   display: flex;
@@ -98,6 +135,7 @@ body {
 }
 .nav-link:hover {
   color: #b08968;
+  font-weight: 500;
   transform: scale(1.1);
 }
 .nav-item {
@@ -114,34 +152,21 @@ body {
   flex-direction: row;
   gap: 15px;
 }
-.social-link {
-  color: #f4f3ee;
-}
-.e-mail {
-  width: 40px;
-  transition: all 0.1s ease-in;
-}
-.e-mail:hover {
-  transform: scale(1.2);
-}
-.telegram {
-  width: 40px;
-  transition: all 0.1s ease-in;
-}
-.telegram:hover {
-  transform: scale(1.2);
-}
+.e-mail,
+.telegram,
 .instagram {
   width: 40px;
   transition: all 0.1s ease-in;
 }
+.e-mail:hover,
+.telegram:hover,
 .instagram:hover {
   transform: scale(1.2);
 }
 .phone-number {
   font-size: 1rem;
-  color: #f4f3ee;
 }
+
 /* CONTAINER */
 
 .container {
@@ -152,6 +177,7 @@ body {
 section {
   background-color: #fff;
   border-radius: 50px;
+  min-height: 800px;
 }
 /* MAIN */
 
@@ -160,37 +186,40 @@ section {
   flex-direction: column;
   gap: 50px;
   padding: 50px 40px;
-  z-index: 0;
+  margin-left: 0px;
   transition: 0.5s;
-}
-.main-active {
-  transform: translateX(20%);
+  z-index: 0;
 }
 
 /* ABOUT */
 
-.about {
-  height: 800px;
+.about,
+.education,
+.skills,
+.experience {
   display: flex;
   flex-direction: column;
 }
 .title {
   margin: 20px 30px 0 0;
+
   text-align: end;
   font-size: 3rem;
   font-weight: 700;
+
   color: #b08968;
 }
 
 .text {
-  text-align: justify;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #7f5539;
   height: auto;
   max-width: 1000px;
   margin: auto 0;
   align-self: center;
+
+  text-align: justify;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primary-color);
 
   padding: 0 30px;
 }
@@ -202,16 +231,14 @@ section {
 
 /* EDUCATION */
 
-.education {
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-}
 .card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-shrink: 1;
+
   margin: auto 0;
+  gap: 20px;
 }
 .card {
   display: flex;
@@ -219,12 +246,16 @@ section {
   justify-content: space-around;
   gap: 10px;
   align-items: center;
+
   background-color: #fff;
-  color: #7f5539;
-  width: 400px;
+  color: var(--primary-color);
+
+  width: clamp(270px, 50%, 400px);
   height: 600px;
+
   border: 2px solid black;
   border-radius: 30px;
+
   padding: 30px 20px;
 }
 .card-title {
@@ -244,15 +275,70 @@ section {
   font-weight: 600;
 }
 
-/* EXPERIENCE */
-
-.experience {
-  height: 800px;
-}
-
 /* SKILLS */
 
-.skills {
-  height: 800px;
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-shrink: 1;
+
+  margin: auto 0;
+  gap: 30px;
+}
+.soft-skills,
+.hard-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: clamp(270px, 50%, 400px);
+  height: 600px;
+
+  background-color: #fff;
+  color: var(--primary-color);
+
+  border: 2px solid black;
+  border-radius: 30px;
+
+  padding: 30px 20px;
+}
+.skills-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.skills-list-item {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* EXPERIENCE */
+
+.experience-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 20px;
+
+  max-width: 1000px;
+  margin: auto;
+}
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.experience-text {
+  height: auto;
+  max-width: 1100px;
+  padding: 0 30px;
+
+  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
 }
 /* FOOTER */
