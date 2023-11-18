@@ -15,7 +15,7 @@
     color: #f4f3ee;
     border-right: 3px solid #b08968;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
     transition: 0.5s;
     z-index: 99;
@@ -100,7 +100,7 @@
 }
 @media screen and (max-width: 768px) {
   .menu {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 40px 10px 10px;
   }
   .main {
@@ -123,8 +123,8 @@
     min-height: 600px;
   }
   .menu {
-    font-size: 1rem;
-    padding: 40px 10px 10px;
+    font-size: 0.8rem;
+    padding: 10px;
   }
   .main {
     padding: 15px 10px;
